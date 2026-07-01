@@ -134,18 +134,7 @@ export function renderResumeHTML(data: ResumeData): string {
     position: relative;
   }
 
-  /* Border frame */
-  .page::before {
-    content: "";
-    position: absolute;
-    top: 12px;
-    left: 12px;
-    right: 12px;
-    bottom: 12px;
-    border: 0.8px solid #d1d5db;
-    border-radius: 3px;
-    pointer-events: none;
-  }
+  /* No border frame */
 
   /* ─── Header ─── */
   .header {
@@ -195,6 +184,7 @@ export function renderResumeHTML(data: ResumeData): string {
   /* ─── Section ─── */
   .section {
     margin-bottom: 9pt;
+    page-break-inside: avoid;
   }
 
   .section-title {
@@ -218,6 +208,7 @@ export function renderResumeHTML(data: ResumeData): string {
   /* ─── Experience ─── */
   .exp-item {
     margin-bottom: 7pt;
+    page-break-inside: avoid;
   }
 
   .exp-top {
@@ -295,6 +286,7 @@ export function renderResumeHTML(data: ResumeData): string {
   /* ─── Projects ─── */
   .proj-item {
     margin-bottom: 6pt;
+    page-break-inside: avoid;
   }
 
   .proj-top {
