@@ -3,7 +3,7 @@ import { ResumeData } from "@/lib/types";
 import { renderResumeHTML } from "@/lib/resume-template";
 
 export const runtime = "nodejs";
-export const maxDuration = 30;
+export const maxDuration = 10;
 
 export async function POST(request: NextRequest) {
   let browser: Awaited<ReturnType<typeof import("puppeteer-core").default.launch>> | null = null;

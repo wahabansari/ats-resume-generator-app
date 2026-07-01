@@ -1,0 +1,7 @@
+{
+  "functions": {
+    "src/app/api/download/route.tsx": {
+      "maxDuration": 10
+    }
+  }
+}
