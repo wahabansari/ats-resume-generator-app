@@ -55,7 +55,7 @@ ResumeCraft is a **free, open-source resume builder** that helps job seekers cre
 |-------|-----------|
 | Framework | Next.js 16 (App Router) |
 | UI | React 19, Tailwind CSS 4, shadcn/ui components |
-| PDF Generation | `@react-pdf/renderer` via Server Route Handler |
+| PDF Generation | Puppeteer + `@sparticuz/chromium` (Vercel) / local Chrome (dev) |
 | AI / LLM | Groq SDK + Llama 3.3 70B Versatile |
 | Theming | `next-themes` (light/dark mode) |
 | Deployment | Vercel (zero-config) |
