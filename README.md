@@ -2,7 +2,7 @@
 
 # ResumeCraft
 
-### Free AI Resume Builder & Tailor | Live Preview | PDF Download | No Login Required
+### Free AI Resume Builder & Tailor | Live Preview | PDF Export | No Login Required
 
 **Build a professional, ATS-friendly resume in minutes. Tailor it to any job description using AI. Download as PDF — completely free, no sign-up needed.**
 
