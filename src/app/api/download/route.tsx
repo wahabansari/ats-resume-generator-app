@@ -6,7 +6,7 @@ export const runtime = "nodejs";
 export const maxDuration = 10;
 
 const CHROMIUM_REMOTE_URL =
-  "https://github.com/Sparticuz/chromium/releases/download/v149.0.0/chromium-v149.0.0-pack.tar";
+  "https://github.com/Sparticuz/chromium/releases/download/v149.0.0/chromium-v149.0.0-pack.x64.tar";
 
 export async function POST(request: NextRequest) {
   let browser: Awaited<ReturnType<typeof import("puppeteer-core").default.launch>> | null = null;
