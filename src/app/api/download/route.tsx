@@ -35,7 +35,7 @@ export async function POST(request: NextRequest) {
     });
 
     const page = await browser.newPage();
-    await page.setContent(html, { waitUntil: "networkidle0", timeout: 15000 });
+    await page.setContent(html, { waitUntil: "load", timeout: 15000 });
 
     const pdfBuffer = await page.pdf({
       format: "Letter",
@@ -45,7 +45,7 @@ export async function POST(request: NextRequest) {
 
     await page.close();
 
-    return new NextResponse(pdfBuffer, {
+    return new NextResponse(Buffer.from(pdfBuffer), {
       headers: {
         "Content-Type": "application/pdf",
         "Content-Disposition": 'attachment; filename="resume.pdf"',
