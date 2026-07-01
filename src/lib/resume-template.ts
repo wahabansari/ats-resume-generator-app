@@ -109,7 +109,7 @@ export function renderResumeHTML(data: ResumeData): string {
 <style>
   @page {
     size: letter;
-    margin: 0;
+    margin: 0.45in 0.5in;
   }
 
   * {
@@ -118,19 +118,22 @@ export function renderResumeHTML(data: ResumeData): string {
     box-sizing: border-box;
   }
 
-  html, body {
+  html {
+    height: 100%;
+  }
+
+  body {
     font-family: 'Roboto', sans-serif;
     font-size: 9.5pt;
     line-height: 1.45;
     color: #333;
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
+    min-height: 100%;
   }
 
   .page {
-    width: 8.5in;
-    min-height: 11in;
-    padding: 0.4in 0.5in;
+    width: 100%;
     position: relative;
   }
 

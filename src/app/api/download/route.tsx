@@ -43,7 +43,7 @@ export async function POST(request: NextRequest) {
     const pdfBuffer = await page.pdf({
       format: "Letter",
       printBackground: true,
-      margin: { top: "0", right: "0", bottom: "0", left: "0" },
+      margin: { top: "0.45in", right: "0.5in", bottom: "0.45in", left: "0.5in" },
     });
 
     await page.close();
