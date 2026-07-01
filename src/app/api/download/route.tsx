@@ -5,6 +5,9 @@ import { renderResumeHTML } from "@/lib/resume-template";
 export const runtime = "nodejs";
 export const maxDuration = 10;
 
+const CHROMIUM_REMOTE_URL =
+  "https://github.com/Sparticuz/chromium/releases/download/v149.0.0/chromium-v149.0.0-pack.tar";
+
 export async function POST(request: NextRequest) {
   let browser: Awaited<ReturnType<typeof import("puppeteer-core").default.launch>> | null = null;
   try {
@@ -16,8 +19,8 @@ export async function POST(request: NextRequest) {
     let args: string[];
 
     if (isVercel) {
-      const chromium = (await import("@sparticuz/chromium")).default;
-      executablePath = await chromium.executablePath();
+      const chromium = (await import("@sparticuz/chromium-min")).default;
+      executablePath = await chromium.executablePath(CHROMIUM_REMOTE_URL);
       args = chromium.args;
     } else {
       executablePath =
