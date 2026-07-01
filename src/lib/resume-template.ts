@@ -185,6 +185,7 @@ export function renderResumeHTML(data: ResumeData): string {
   .section {
     margin-bottom: 9pt;
     page-break-inside: avoid;
+    break-inside: avoid;
   }
 
   .section-title {
@@ -198,6 +199,12 @@ export function renderResumeHTML(data: ResumeData): string {
     margin-bottom: 5pt;
   }
 
+  /* Allow long sections to break if they exceed a page */
+  .section.experience-section {
+    page-break-inside: auto;
+    break-inside: auto;
+  }
+
   /* ─── Summary ─── */
   .summary-text {
     font-size: 9.5pt;
@@ -209,6 +216,12 @@ export function renderResumeHTML(data: ResumeData): string {
   .exp-item {
     margin-bottom: 7pt;
     page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  .exp-item:last-child {
+    page-break-inside: avoid;
+    break-inside: avoid;
   }
 
   .exp-top {
@@ -287,6 +300,12 @@ export function renderResumeHTML(data: ResumeData): string {
   .proj-item {
     margin-bottom: 6pt;
     page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  .proj-item:last-child {
+    page-break-inside: avoid;
+    break-inside: avoid;
   }
 
   .proj-top {
@@ -316,6 +335,8 @@ export function renderResumeHTML(data: ResumeData): string {
   /* ─── Education ─── */
   .edu-item {
     margin-bottom: 4pt;
+    page-break-inside: avoid;
+    break-inside: avoid;
   }
 
   .edu-top {
@@ -343,6 +364,8 @@ export function renderResumeHTML(data: ResumeData): string {
   /* ─── Certs ─── */
   .cert-item {
     margin-bottom: 3pt;
+    page-break-inside: avoid;
+    break-inside: avoid;
   }
 
   .cert-top {
@@ -398,7 +421,7 @@ export function renderResumeHTML(data: ResumeData): string {
 
   <!-- Experience -->
   ${experienceHtml ? `
-  <div class="section">
+  <div class="section experience-section">
     <div class="section-title">Experience</div>
     ${experienceHtml}
   </div>` : ""}
